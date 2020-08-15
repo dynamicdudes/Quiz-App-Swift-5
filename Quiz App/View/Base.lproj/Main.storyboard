@@ -15,6 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yri-jr-08H">
+                                <rect key="frame" x="29.999999999999993" y="64" width="68.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.97723937250000004" blue="0.96182690709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="fAb-gL-Vo5" userLabel="ProgressBar">
                                 <rect key="frame" x="20" y="850.33333333333337" width="374" height="2.6666666666666288"/>
                                 <color key="progressTintColor" red="0.48376629840000002" green="0.36852532630000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -48,29 +54,46 @@
                                 <color key="textColor" red="1" green="0.97723937250000004" blue="0.96182690709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpF-61-Upy">
+                                <rect key="frame" x="0.0" y="708.33333333333337" width="414" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Option">
+                                    <color key="titleColor" red="1" green="0.97723937250000004" blue="0.96182690709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qC-7S-MpY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18345883773561644" green="0.14706410283424656" blue="0.45761229162191791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yri-jr-08H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4i7-DA-jyg"/>
                             <constraint firstItem="jCP-T7-c5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CXj-d9-DDs"/>
                             <constraint firstItem="fAb-gL-Vo5" firstAttribute="top" secondItem="aq3-kj-co2" secondAttribute="bottom" constant="40" id="Ns5-tZ-2pC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jCP-T7-c5q" secondAttribute="trailing" id="Pc8-ZN-QY9"/>
                             <constraint firstItem="Dc3-y4-SLX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QeM-k8-nmN"/>
                             <constraint firstItem="aq3-kj-co2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RaD-jv-Zxs"/>
+                            <constraint firstItem="mpF-61-Upy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SbS-Yl-pKM"/>
                             <constraint firstItem="jCP-T7-c5q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ut0-d8-7fO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dc3-y4-SLX" secondAttribute="trailing" id="WTB-g2-nSV"/>
+                            <constraint firstItem="yri-jr-08H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="WnA-3n-VCE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fAb-gL-Vo5" secondAttribute="trailing" id="Zjn-vh-QIB"/>
                             <constraint firstItem="fAb-gL-Vo5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dUL-L3-pwm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpF-61-Upy" secondAttribute="trailing" id="j3S-iV-6KA"/>
                             <constraint firstItem="aq3-kj-co2" firstAttribute="top" secondItem="Dc3-y4-SLX" secondAttribute="bottom" constant="15" id="j9u-b0-6VP"/>
                             <constraint firstItem="jCP-T7-c5q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="oRh-Ps-Ehb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aq3-kj-co2" secondAttribute="trailing" id="rZU-UJ-Yv4"/>
+                            <constraint firstItem="Dc3-y4-SLX" firstAttribute="top" secondItem="mpF-61-Upy" secondAttribute="bottom" constant="10" id="uSe-7H-c2C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fAb-gL-Vo5" secondAttribute="bottom" constant="10" id="z4B-y4-f9z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="aq3-kj-co2" id="JC5-jS-gT8"/>
+                        <outlet property="newButton" destination="mpF-61-Upy" id="tqc-aw-goQ"/>
                         <outlet property="progressBar" destination="fAb-gL-Vo5" id="KDR-aE-UPT"/>
                         <outlet property="questionLabel" destination="jCP-T7-c5q" id="S8P-U5-YrQ"/>
+                        <outlet property="scoreLabel" destination="yri-jr-08H" id="vNl-7L-h10"/>
                         <outlet property="trueButton" destination="Dc3-y4-SLX" id="j3t-c3-8B1"/>
                     </connections>
                 </viewController>
