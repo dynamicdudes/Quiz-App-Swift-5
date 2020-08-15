@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="fAb-gL-Vo5" userLabel="ProgressBar">
+                                <rect key="frame" x="20" y="850.33333333333337" width="374" height="2.6666666666666288"/>
+                                <color key="progressTintColor" red="0.48376629840000002" green="0.36852532630000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="trackTintColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aq3-kj-co2">
+                                <rect key="frame" x="0.0" y="788.33333333333337" width="414" height="22"/>
+                                <color key="tintColor" red="1" green="0.97723937250000004" blue="0.96182690709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="False" image="xmark" catalog="system">
+                                    <color key="titleColor" red="1" green="0.97723937250000004" blue="0.96182690709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a4q-Jo-f1M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-y4-SLX">
+                                <rect key="frame" x="0.0" y="751.33333333333337" width="414" height="22"/>
+                                <color key="tintColor" red="1" green="0.97723937250000004" blue="0.96182690709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="True" image="checkmark" catalog="system">
+                                    <color key="titleColor" red="1" green="0.97723937250000004" blue="0.96182690709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nso-bF-xo2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question will appear in here." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-T7-c5q">
+                                <rect key="frame" x="0.0" y="373" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.97723937250000004" blue="0.96182690709999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18345883773561644" green="0.14706410283424656" blue="0.45761229162191791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jCP-T7-c5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CXj-d9-DDs"/>
+                            <constraint firstItem="fAb-gL-Vo5" firstAttribute="top" secondItem="aq3-kj-co2" secondAttribute="bottom" constant="40" id="Ns5-tZ-2pC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jCP-T7-c5q" secondAttribute="trailing" id="Pc8-ZN-QY9"/>
+                            <constraint firstItem="Dc3-y4-SLX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QeM-k8-nmN"/>
+                            <constraint firstItem="aq3-kj-co2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RaD-jv-Zxs"/>
+                            <constraint firstItem="jCP-T7-c5q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ut0-d8-7fO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dc3-y4-SLX" secondAttribute="trailing" id="WTB-g2-nSV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fAb-gL-Vo5" secondAttribute="trailing" id="Zjn-vh-QIB"/>
+                            <constraint firstItem="fAb-gL-Vo5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dUL-L3-pwm"/>
+                            <constraint firstItem="aq3-kj-co2" firstAttribute="top" secondItem="Dc3-y4-SLX" secondAttribute="bottom" constant="15" id="j9u-b0-6VP"/>
+                            <constraint firstItem="jCP-T7-c5q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="oRh-Ps-Ehb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aq3-kj-co2" secondAttribute="trailing" id="rZU-UJ-Yv4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fAb-gL-Vo5" secondAttribute="bottom" constant="10" id="z4B-y4-f9z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="falseButton" destination="aq3-kj-co2" id="JC5-jS-gT8"/>
+                        <outlet property="progressBar" destination="fAb-gL-Vo5" id="KDR-aE-UPT"/>
+                        <outlet property="questionLabel" destination="jCP-T7-c5q" id="S8P-U5-YrQ"/>
+                        <outlet property="trueButton" destination="Dc3-y4-SLX" id="j3t-c3-8B1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
